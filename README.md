@@ -3,6 +3,8 @@ ETL project
 
 Here is my ETL project!
 
+** YOU WILL NEED A GKEY AS WELL AS THE MONGO USER AND PASSWORD ***
+
 The goal of this project was to find the NHL faceoff wins by player then find some more information about the city they play in.
 
 The final output will show the player name, team they play on, the city they play for, the arena they play there home games in, the lat and lang for the city, and the closest restaurant in that city. This way if you see 'Patrice Bergeron' wins the most face_offs, you may want to go see him play live! With this you will know what team he plays for, where he plays, and when you go watch him, where can you grab a bite to eat entering the city.
