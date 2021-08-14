@@ -1,13 +1,10 @@
-# ETL-Challenge
-ETL project
-
-Here is my ETL project!
+# ETL-Project
 
 ** YOU WILL NEED A GKEY AS WELL AS THE MONGO USER AND PASSWORD ***
 
 The goal of this project was to find the NHL faceoff wins by player then find some more information about the city they play in.
 
-The final output will show the player name, team they play on, the city they play for, the arena they play there home games in, the lat and lang for the city, and the closest restaurant in that city. This way if you see 'Patrice Bergeron' wins the most face_offs, you may want to go see him play live! With this you will know what team he plays for, where he plays, and when you go watch him, where can you grab a bite to eat entering the city.
+The final output will show the player name, team they play on, the city they play for, the arena they play their home games in, the lat and lang for the city, and the closest restaurant in that city. This way if you see 'Patrice Bergeron' wins the most face offs, you may want to go see him play live! With this you will know what team he plays for, where he plays, and when you go watch him, where can you grab a bite to eat entering the city.
 
 Everything starts in the abbrevname jupyter notebook.
     . I scraped http://www.sportsforecaster.com/nhl/abbreviations to find the table
@@ -19,9 +16,9 @@ From there we move to the faceoff__ jupyter notebook.
     . kaggle was used to find the csv
     . https://www.kaggle.com/garyrogers/nhl20192020faceoffdata
     . stored the csv in a variable called faceoff_data_df
-    . just got the columns needed player team and win (if they won or lost the faceoff)
+    . just got the columns needed.. player, team and win (if they won or lost the faceoff)
     . pulled out only the instances they won
-    . grouped it by player and team to get the total amount of wins per player
+    . grouped it by player and team to get the total amount of faceoff wins per player
     . sorted it so most wins were on top and took the ones that had 30 or more wins
     .*FROM HERE I IMPORT THE city_abbrev TABLE from abbrevname
     . Merge those two df's on the abbreviation
@@ -36,8 +33,8 @@ From here we go to the Wiki_table jupyter notebook
     I pulled another table out that consisted of the arena names so I pulled that to be used later
 
 Now its time for the ETL_final jupyter notebook
-    . I pulled team_info from faceoff__
-    . I then pulled team_name, team_arena, team_name_ from Wiki_table
+    . I pulled the team_info df from faceoff__ notebook
+    . I then pulled team_name, team_arena, team_name_ df's from Wiki_table notebook
     . the goal with bringing in all these tables was to join them so we could see the player, arena, team, abbreviation, wins, and city so I could make API calls.
     . Once they were all joined together to make the PTA_df (PTA stands for player,team,arena) i could pull the cities out into its own list/df
     . once the city_df__ was made I could do a google API search to find the lat and lang of the city
